@@ -19,7 +19,7 @@ def fazer_package(num_seq, msg):
     return pacote 
 
 def menu():
-        while True:
+    while True:            
             msg, addr = server.recvfrom(1024)
             package = pickle.loads(msg)
             num_seq, msg, checksum, dest_addr = package
@@ -51,8 +51,7 @@ def menu():
 
 def start():
     print("Servidor ouvindo")
-    while True:
-        menu()
+    menu()
 
 if __name__ == "__main__":
     start()
