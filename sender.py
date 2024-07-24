@@ -23,12 +23,8 @@ def rdt(msg, destino):
         package = fazer_package(num_seq, msg)
         server.sendto(package, destino)
         try:
-            resposta, addr = server.recvfrom(1024)
-            pacote_ack = pickle.loads(resposta)
-            ack, num_ack = pacote_ack
-            if ack == "ACK" and num_ack == num_seq:
-                num_seq = 1 - num_seq
-                break
+            #blabla
+            print("blabla")
         except socket.timeout:
             print("Demorou demais -> Reenviando pacote.")
             rdt(msg, destino)
