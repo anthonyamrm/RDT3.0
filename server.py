@@ -19,7 +19,6 @@ def fazer_package(num_seq, msg):
     return pacote 
 
 def menu():
-    while 1:
         while True:
             msg, addr = server.recvfrom(1024)
             package = pickle.loads(msg)
